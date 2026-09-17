@@ -44,29 +44,8 @@ The original five-note financial-report cue (BASIC lines 1140–1148) plays once
 
 Weather melodies use the original Apple II note data, with reconstructed pitch and approximate timing. Sunny, cloudy, and hot cues use a softened square wave. The storm uses a single continuous triangle-wave voice, smooth pitch transitions, and the original rests; it no longer restarts an oscillator or chops the volume envelope at every note. This is a modern reconstruction, not cycle-accurate Apple II speaker emulation.
 
-## Development
-
-The published site needs `index.html`, `styles.css`, `app.js`, `rain.svg`, `scene.svg`, `scene-hot.svg`, `scene-cloudy.svg`, `scene-storm.svg`, `lemon.svg`, and `.nojekyll`. Generated assets are checked in. No npm dependencies are required.
-
-Edit `game-source.js`, `language.js`, `engine.js`, `economy.js`, `audio.js`, or `weather-gate.js`, then rebuild. Weather scene variants are generated from `scene.svg`. Do not edit generated `app.js` or scene variants directly.
-
-```sh
-npm run build
-npm test
-npm run check
-npm run dev
-```
-
-The last command rebuilds and starts an optional developer preview at `http://127.0.0.1:4173`. Restart after source edits. Tests reject stale generated assets. If the game script fails to load, a visible recovery message and Reload button remain on the page.
-
-## Verification
-
-Automated tests exercise the published bundle through fourteen-day games with every player count from 2 to 8, both languages, all five currencies, player validation, empty and invalid decisions, private handoffs, two-second individual reports, storms after all submissions, bankruptcy, multi-player ties, the Oxford comma, restart cancellation/confirmation, native leave-warning registration/removal, forecast streak limits, accounting, and continuous storm-note scheduling. Asset checks cover the standalone bundle and locally linked files.
-
-Browser checks cover the new title screen, UK/US place names and instruction text, eight-name layout, the in-game restart dialog, setting locks, blank decisions, and the individual report flow. A fresh browser run on 17 September 2026 also checked the opening weather sequence, a cloudy-day storm after all submissions, the gradient rain layers, and a negative-profit report. No browser errors were reported during that run. Speaker output has not been independently assessed; audio scheduling and the note sequence are checked in code.
-
 ## Credits
 
 Modern game and presentation: **[Fraise Aurora](https://github.com/fraise-a)**.
 
-Inspired by **Lemonade Stand**, originally by Bob Jamison / MECC, adapted for Apple II by Charlie Kellner in 1979. This is an independent tribute.
+Inspired by **Lemonade Stand**, originally by Bob Jamison / MECC, adapted for Apple II by Charlie Kellner in 1979.
