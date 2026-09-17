@@ -10,44 +10,6 @@ Make lemonade, advertise your stand, set your price, and see whose business earn
 - UK and US English, with British pounds as the default and four other currency options.
 - Runs directly in a web browser, with no installation required for players.
 
-## Publish on GitHub Pages
-
-### Upload the game
-
-1. Extract `lemonade-stand.zip` on your computer.
-2. Sign in to GitHub and create a **public** repository. `lemonade-stand` is a suitable name. Leave GitHub's “Add a README” option off: this project already includes one.
-3. On the new repository page, choose **uploading an existing file** (or **Add file → Upload files** in an existing repository).
-4. Drag in the **contents** of the extracted folder, including the `tests` folder. Do not upload the ZIP itself or nest the project inside another folder. `index.html` and `README.md` must appear directly in the repository's main file list.
-5. Include `.nojekyll` and `.gitignore`. On a Mac, press **Command + Shift + .** in Finder to show these hidden files. Do not upload `.DS_Store`.
-6. Commit the uploaded files to `main`.
-
-### Enable the playable website
-
-1. Open the repository's **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select **main**, choose **/(root)**, and click **Save**.
-4. Wait for deployment to finish. The **Actions** tab shows progress; **Settings → Pages** provides the published website link.
-
-If the account is `fraise-a` and the repository is named `lemonade-stand`, the default address will be **https://fraise-a.github.io/lemonade-stand/**. This address becomes available after publication; change the repository portion if you choose a different name.
-
-Official instructions: [uploading files](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) and [configuring GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-### Share and update it
-
-Share the **Pages website link** for people to play. The `github.com` repository link shows the source code and this README. Add the published Pages URL to the repository's **About → Website** field so visitors can find the game easily.
-
-For a prominent play link in this README, add the following after the introduction once your site is live (adjust the address if needed):
-
-```markdown
-**[Play Lemonade Stand](https://fraise-a.github.io/lemonade-stand/)**
-```
-
-To publish an update, upload and commit the changed project files to `main`; Pages will redeploy. If changing JavaScript source modules, rebuild `app.js` first using the development instructions below. Uploading the already-built project requires no commands.
-
-People who want the source can use GitHub's **Code → Download ZIP**. For ordinary players, the website link is all they need.
-
-Visitors need no terminal, installation, server, account, or build step. All game logic runs in their browser. Relative asset URLs support project Pages sites. Keep `.nojekyll` in the repository.
-
 ## Starting and playing
 
 Choose a language and currency on the title screen, then press **Start**. The welcome page leads to a player-count field (2–8), individual names, and two instruction pages. The welcome, instructions, notices, and individual financial reports use Fraise Aurora's supplied wording, with dynamic names, prices, and language choices.
