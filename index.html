@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173c35">
+  <meta name="description" content="A fresh take on the Apple II classic. Two to eight lemonade stands, fourteen summer days, one friendly rivalry. Created by Fraise Aurora.">
+  <title>Lemonade Stand · A little summer rivalry</title>
+  <link rel="icon" href="./lemon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preload" href="./scene-hot.svg" as="image">
+  <link rel="preload" href="./scene-cloudy.svg" as="image">
+  <link rel="preload" href="./scene-storm.svg" as="image">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <a id="brand" class="brand" href="./" aria-label="Lemonade Stand home"><img src="./lemon.svg" alt="" width="34" height="34"><span>LEMONADE <b>STAND</b></span></a>
+      <div class="settings">
+        <div id="language-control" class="setting-control" aria-describedby="language-tooltip"><label for="language">Language</label><select id="language" aria-label="Game language"><option value="en-GB">English (United Kingdom)</option><option value="en-US">English (United States)</option></select><span id="language-tooltip" class="setting-tooltip" role="tooltip"></span></div>
+        <div id="currency-control" class="setting-control" aria-describedby="currency-tooltip"><label for="currency">Currency</label><select id="currency" aria-label="Game currency"><option value="GBP">£ GBP</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option><option value="CAD">CA$ CAD</option><option value="AUD">A$ AUD</option></select><span id="currency-tooltip" class="setting-tooltip" role="tooltip"></span></div>
+        <button id="sound" class="icon-button" aria-pressed="true" title="Toggle music">♫ <span>Sound on</span></button><button id="help" class="icon-button" aria-label="How to play">?</button>
+      </div>
+    </header>
+    <main id="game" class="game" aria-label="Lemonade Stand game">
+      <div class="scenery" aria-hidden="true"></div><div class="weather-effects" aria-hidden="true"><div class="rain rain-far"></div><div class="rain rain-near"></div><svg class="lightning" viewBox="0 0 1040 780" preserveAspectRatio="xMidYMid slice"><path class="bolt-one" d="m202 124-32 96 42-15-26 97 47-38-34 125 70-164-46 29 21-85-38 15 25-60Z"/><path class="bolt-two" d="m823 148-33 72 38-13-43 119 54-46-24 107 75-159-45 28 22-88-38 19 21-39Z"/></svg></div>
+      <header class="game-header"><span class="location" id="location">LEMONSHIRE · ENGLAND</span><span id="day-label" class="day-label">A LITTLE SUMMER RIVALRY</span></header>
+      <div id="screen" class="screen"><section class="panel" id="startup-panel"><h2>Opening your stand…</h2><p id="startup-message" role="status">Loading the game.</p><button class="primary" onclick="location.reload()">Reload game</button><noscript><p>Please enable JavaScript to play.</p></noscript></section></div>
+      <footer class="game-footer"><span id="footer-hint">A classic, freshly squeezed.</span><span id="progress-label">2–8 PLAYERS <i>·</i> 14 DAYS</span></footer>
+    </main>
+    <footer class="page-footer"><span>Inspired by the 1979 Apple II classic.</span><span>Created by <a href="https://github.com/fraise-a" target="_blank" rel="noopener noreferrer">Fraise Aurora <span aria-hidden="true">↗</span></a></span></footer>
+  </div>
+  <dialog id="help-dialog"><button class="dialog-close icon-button" aria-label="Close instructions">×</button><div id="help-rules"></div><button class="primary dialog-close">Back to the game</button></dialog>
+  <dialog id="restart-dialog" aria-labelledby="restart-title"><h2 id="restart-title">Start a new game?</h2><p>Your current progress will be lost.</p><div class="restart-actions"><button id="cancel-restart" class="secondary" autofocus>Cancel</button><button id="confirm-restart" class="primary">Start a new game</button></div></dialog>
+  <script>
+    function gameLoadFailed() {
+      const message = document.getElementById('startup-message');
+      if (message) message.textContent = 'The game could not load. Please try Reload game.';
+    }
+    window.addEventListener('error', gameLoadFailed);
+  </script>
+  <script src="./app.js" defer onerror="gameLoadFailed()"></script>
+</body>
+</html>

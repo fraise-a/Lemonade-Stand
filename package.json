@@ -1,0 +1,14 @@
+{
+  "name": "lemonade-stand",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "A modern, 2\u20138 player Apple II Lemonade Stand tribute by Fraise Aurora",
+  "scripts": {
+    "build": "node build.js",
+    "test": "node build.js --check && node --test tests/*.test.js",
+    "predev": "npm run build",
+    "dev": "node dev-server.js",
+    "check": "node build.js --check && node --check app.js && node --check language.js && node --check game-source.js && node --check engine.js && node --check economy.js && node --check weather-gate.js && node --check audio.js && node --check build.js && node --check dev-server.js"
+  }
+}

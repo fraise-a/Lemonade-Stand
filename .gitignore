@@ -1,0 +1,22 @@
+# macOS Finder metadata and AppleDouble resource forks
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+__MACOSX/
+Icon?
+
+# macOS volume metadata, indexes, and temporary files
+.DocumentRevisions-V100/
+.Spotlight-V100/
+.TemporaryItems/
+.Trashes/
+.fseventsd/
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+
+# Local dependencies and packaged project download
+node_modules/
+lemonade-stand.zip
