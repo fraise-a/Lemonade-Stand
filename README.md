@@ -18,12 +18,6 @@ Daily weather plays before costs or decisions. Each player enters a new batch si
 
 The logo opens an in-game restart confirmation. Cancel preserves progress; confirming returns to the title and unlocks settings. The browser's generic leave-page confirmation is requested while a game is active. Browser support and user-interaction requirements govern whether that native warning appears; no custom leave-page message is supplied. Progress lives in memory, so leaving or reloading loses it.
 
-## Language and currency
-
-**English (United Kingdom)** is the default: **Lemonshire · England**, “mum,” and “roadworks.” **English (United States)** uses **Lemonsville · California**, “mom,” and “roadwork.” Both use Oxford commas in lists of three or more names. Language locks immediately after the title screen. Currency locks once the named game begins. Locked settings have hover and keyboard-focus explanations.
-
-GBP is the default currency. GBP, USD, EUR, CAD, and AUD use separate contemporary price estimates; see [PRICING.md](PRICING.md). Language and currency are independent. Amounts below one major unit use `p` or `¢`, dollar currencies use `$` without country prefixes inside the game, and losses use a leading ASCII minus (`-25p`, `-$1.50`). Values are stored as integer minor units. Price entry accepts decimals, currency symbols, and explicit minor amounts, such as `1.50`, `£1.50`, or `50p`.
-
 ## Weather and rules
 
 Requested house rules override the original game's opening forecast sequence:
